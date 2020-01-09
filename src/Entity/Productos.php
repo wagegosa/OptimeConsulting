@@ -32,14 +32,19 @@ class Productos
     private $descripcion;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=120)
      */
     private $marca;
 
     /**
-     * @ORM\Column(type="float")
+     * @ORM\Column(type="integer")
      */
     private $categoria;
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $precio;
 
     public function getId(): ?int
     {
@@ -94,14 +99,26 @@ class Productos
         return $this;
     }
 
-    public function getCategoria(): ?float
+    public function getCategoria(): ?int
     {
         return $this->categoria;
     }
 
-    public function setCategoria(float $categoria): self
+    public function setCategoria(int $categoria): self
     {
         $this->categoria = $categoria;
+
+        return $this;
+    }
+
+    public function getPrecio(): ?float
+    {
+        return $this->precio;
+    }
+
+    public function setPrecio(float $precio): self
+    {
+        $this->precio = $precio;
 
         return $this;
     }
