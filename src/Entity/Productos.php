@@ -22,7 +22,7 @@ class Productos
     private $codigo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=120)
      */
     private $nombre;
 
@@ -32,7 +32,7 @@ class Productos
     private $descripcion;
 
     /**
-     * @ORM\Column(type="string", length=120)
+     * @ORM\Column(type="string", length=255)
      */
     private $marca;
 

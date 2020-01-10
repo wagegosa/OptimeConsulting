@@ -1,7 +1,7 @@
 <?php
 
 namespace App\DataFixtures;
-
+//Agregamos la clase
 use App\Entity\Categorias;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -19,7 +19,6 @@ class IngreCategoria extends Fixture
             $categoria->setActivo(1, $i);
             $manager->persist($categoria);
         }
-
         $manager->flush();
     }
 }
